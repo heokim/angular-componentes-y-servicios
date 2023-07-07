@@ -3,6 +3,8 @@
 
 <hr>
 <p><input type="text" [(ngModel)]="imgParent"></p>
+<p>https://www.w3schools.com/howto/img_avatar.png</p>
+<p>https://www.w3schools.com/howto/img_avatar2.png</p>
 <button (click)="toggleImg()">Toggle Avater IMG</button>
 <p>{{showImg}}</p>
 <app-img *ngIf="showImg" (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
