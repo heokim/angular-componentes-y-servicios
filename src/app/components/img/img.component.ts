@@ -44,10 +44,10 @@ export class ImgComponent
     // before render
     // async -- fetch  -- once time
     console.log('ngOnInit', 'imgValue => ', this.img);
-    this.counterFuntion = window.setInterval(() => {
+    /*this.counterFuntion = window.setInterval(() => {
       this.counter += 1;
       console.log('run counter');
-    }, 1000);
+    }, 1000);*/
   }
 
   ngOnChanges(changes: SimpleChanges): void {
