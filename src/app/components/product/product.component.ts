@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from 'src/app/models/product.model';
 
@@ -15,6 +15,8 @@ export class ProductComponent {
     price: 0,
   };
 
+  @Output() addedProduct = new EventEmitter<Product>();
+
   /*
   si se quiere que la propiedad tenga otro nombre
   se le tiene que pasar como argumento al
@@ -27,4 +29,8 @@ export class ProductComponent {
     price: 0,
   };
   */
+
+  onAddToCart() {
+    this.addedProduct.emit(this.product);
+  }
 }

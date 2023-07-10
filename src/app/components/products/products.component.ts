@@ -39,4 +39,11 @@ export class ProductsComponent {
       img: './assets/images/toy.jpg',
     },
   ];
+  myShoppingCart: Product[] = [];
+  total: number = 0;
+
+  onAddToShoppingCart(product: Product) {
+    this.myShoppingCart.push(product);
+    this.total = this.myShoppingCart.reduce((sum, item) => sum + item.price, 0);
+  }
 }
