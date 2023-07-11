@@ -3,5 +3,6 @@
   <h2>{{product.price | currency:'USD'}}</h2>
   <p>{{product.title}}</p>
   <p>[{{product.category}}]</p>
+  <p appHighlight> {{product.description}}</p>
 </div>
 <button (click)="onAddToCart()">Add cart</button>

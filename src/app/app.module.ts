@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { VocalsToSymbolsPipe } from './pipes/vocals-to-symbols.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { VocalsToSymbolsPipe } from './pipes/vocals-to-symbols.pipe';
     ReversePipe,
     TimeAgoPipe,
     VocalsToSymbolsPipe,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
