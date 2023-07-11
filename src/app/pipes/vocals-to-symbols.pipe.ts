@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class VocalsToSymbolsPipe implements PipeTransform {
   transform(value: string): string {
-    let formatedText =value
+    const formatedText =value
       .replaceAll('a', '4')
       .replaceAll('A', '4')
       .replaceAll('e', '3')

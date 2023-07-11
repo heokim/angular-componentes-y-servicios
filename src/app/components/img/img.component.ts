@@ -7,7 +7,6 @@ import {
   OnChanges,
   AfterViewInit,
   OnDestroy,
-  SimpleChange,
   SimpleChanges,
 } from '@angular/core';
 
@@ -19,15 +18,16 @@ import {
 export class ImgComponent
   implements OnInit, OnChanges, AfterViewInit, OnDestroy
 {
-  img: string = 'Valor por Defecto';
+  img = 'Valor por Defecto';
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('img')
   set changeImg(newImg: string) {
     this.img = newImg;
     console.log('change just img ', this.img);
     // code
   }
-  @Input() alt: string = 'Valor por Defecto';
+  @Input() alt = 'Valor por Defecto';
   @Output() loaded = new EventEmitter<string>();
 
   imgDefault = './assets/images/default.png';
