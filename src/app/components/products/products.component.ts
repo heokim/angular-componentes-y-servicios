@@ -43,6 +43,8 @@ export class ProductsComponent {
   ];
   myShoppingCart: Product[] = [];
   total: number = 0;
+  today: Date = new Date();
+  date = new Date(2023, 7, 12);
 
   constructor(
     private storeService: StoreService,
