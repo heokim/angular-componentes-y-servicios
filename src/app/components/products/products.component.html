@@ -10,6 +10,15 @@
 <p>
   {{'PalaBras Con MaYUSculAS y MINUscUlaS' | lowercase}}
 </p>
+<p>
+  {{'Este texto es para probar un pipe personalizado' | reverse}}
+</p>
+<p>
+  {{'Este texto es para probar un pipe personalizado' | vocalsToSymbols}}
+</p>
+<p>
+  date: {{today | timeAgo}}
+</p>
 <div class="products--grid">
   <app-product *ngFor="let product of products" [product]="product"
     (addedProduct)="onAddToShoppingCart($event)"></app-product>
